@@ -5,7 +5,7 @@ This project builds and evaluates six supervised machine learning
 classifiers to predict heart disease using the UCI Heart Disease 
 dataset (270 patients, 13 clinical features).
 
-Built as part of EEE 591 - Introduction to Machine Learning  
+Built as part of EEE 591 - Python for rapid Engineering Solutions 
 Arizona State University | Spring 2026
 
 ---
