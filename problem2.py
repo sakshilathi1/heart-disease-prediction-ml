@@ -1,10 +1,3 @@
-# EEE 591 - Project 1
-# Problem 2: Classifiers 
-# Name: Sakshi Lathi
-# Assignment: Project 1
-# Date: February 21, 2026
-# AI Citation: https://gemini.google.com/share/99dc673e0103
-
 import warnings
 warnings.filterwarnings('ignore')  # suppress sklearn convergence warnings
 import matplotlib
