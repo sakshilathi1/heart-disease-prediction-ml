@@ -1,0 +1,251 @@
+======================================================================
+DATASET SHAPE
+======================================================================
+(270, 14)
+
+======================================================================
+FIRST 10 ROWS
+======================================================================
+   age  sex  cpt  rbp   sc  fbs  rer  mhr  eia  opst  dests  nmvcf  thal  a1p2
+0   29    1    2  130  204    0    2  202    0   0.0      1      0     3     1
+1   34    0    2  118  210    0    0  192    0   0.7      1      0     3     1
+2   34    1    1  118  182    0    2  174    0   0.0      1      0     3     1
+3   35    1    4  120  198    0    0  130    1   1.6      2      0     7     2
+4   35    1    4  126  282    0    2  156    1   0.0      1      0     7     2
+5   35    0    4  138  183    0    0  182    0   1.4      1      0     3     1
+6   37    0    3  120  215    0    0  170    0   0.0      1      0     3     1
+7   37    1    3  130  250    0    0  187    0   3.5      3      0     3     1
+8   38    1    1  120  231    0    0  182    1   3.8      2      0     7     2
+9   39    0    3   94  199    0    0  179    0   0.0      1      0     3     1
+
+======================================================================
+DATA TYPES
+======================================================================
+age        int64
+sex        int64
+cpt        int64
+rbp        int64
+sc         int64
+fbs        int64
+rer        int64
+mhr        int64
+eia        int64
+opst     float64
+dests      int64
+nmvcf      int64
+thal       int64
+a1p2       int64
+dtype: object
+
+======================================================================
+DESCRIPTIVE STATISTICS (ALL 14 COLUMNS)
+======================================================================
+              age         sex         cpt  ...       nmvcf        thal        a1p2
+count  270.000000  270.000000  270.000000  ...  270.000000  270.000000  270.000000
+mean    54.433333    0.677778    3.174074  ...    0.670370    4.696296    1.444444
+std      9.109067    0.468195    0.950090  ...    0.943896    1.940659    0.497827
+min     29.000000    0.000000    1.000000  ...    0.000000    3.000000    1.000000
+25%     48.000000    0.000000    3.000000  ...    0.000000    3.000000    1.000000
+50%     55.000000    1.000000    3.000000  ...    0.000000    3.000000    1.000000
+75%     61.000000    1.000000    4.000000  ...    1.000000    7.000000    2.000000
+max     77.000000    1.000000    4.000000  ...    3.000000    7.000000    2.000000
+
+[8 rows x 14 columns]
+
+======================================================================
+MISSING VALUES CHECK
+======================================================================
+age      0
+sex      0
+cpt      0
+rbp      0
+sc       0
+fbs      0
+rer      0
+mhr      0
+eia      0
+opst     0
+dests    0
+nmvcf    0
+thal     0
+a1p2     0
+dtype: int64
+
+======================================================================
+FULL CORRELATION MATRIX
+======================================================================
+            age       sex       cpt       rbp        sc       fbs       rer       mhr       eia      opst     dests     nmvcf      thal      a1p2
+age    1.000000 -0.094401  0.096920  0.273053  0.220056  0.123458  0.128171 -0.402215  0.098297  0.194234  0.159774  0.356081  0.106100  0.212322
+sex   -0.094401  1.000000  0.034636 -0.062693 -0.201647  0.042140  0.039253 -0.076101  0.180022  0.097412  0.050545  0.086830  0.391046  0.297721
+cpt    0.096920  0.034636  1.000000 -0.043196  0.090465 -0.098537  0.074325 -0.317682  0.353160  0.167244  0.136900  0.225890  0.262659  0.417436
+rbp    0.273053 -0.062693 -0.043196  1.000000  0.173019  0.155681  0.116157 -0.039136  0.082793  0.222800  0.142472  0.085697  0.132045  0.155383
+sc     0.220056 -0.201647  0.090465  0.173019  1.000000  0.025186  0.167652 -0.018739  0.078243  0.027709 -0.005755  0.126541  0.028836  0.118021
+fbs    0.123458  0.042140 -0.098537  0.155681  0.025186  1.000000  0.053499  0.022494 -0.004107 -0.025538  0.044076  0.123774  0.049237 -0.016319
+rer    0.128171  0.039253  0.074325  0.116157  0.167652  0.053499  1.000000 -0.074628  0.095098  0.120034  0.160614  0.114368  0.007337  0.182091
+mhr   -0.402215 -0.076101 -0.317682 -0.039136 -0.018739  0.022494 -0.074628  1.000000 -0.380719 -0.349045 -0.386847 -0.265333 -0.253397 -0.418514
+eia    0.098297  0.180022  0.353160  0.082793  0.078243 -0.004107  0.095098 -0.380719  1.000000  0.274672  0.255908  0.153347  0.321449  0.419303
+opst   0.194234  0.097412  0.167244  0.222800  0.027709 -0.025538  0.120034 -0.349045  0.274672  1.000000  0.609712  0.255005  0.324333  0.417967
+dests  0.159774  0.050545  0.136900  0.142472 -0.005755  0.044076  0.160614 -0.386847  0.255908  0.609712  1.000000  0.109498  0.283678  0.337616
+nmvcf  0.356081  0.086830  0.225890  0.085697  0.126541  0.123774  0.114368 -0.265333  0.153347  0.255005  0.109498  1.000000  0.255648  0.455336
+thal   0.106100  0.391046  0.262659  0.132045  0.028836  0.049237  0.007337 -0.253397  0.321449  0.324333  0.283678  0.255648  1.000000  0.525020
+a1p2   0.212322  0.297721  0.417436  0.155383  0.118021 -0.016319  0.182091 -0.418514  0.419303  0.417967  0.337616  0.455336  0.525020  1.000000
+
+======================================================================
+CORRELATION OF EACH FEATURE WITH TARGET (a1p2)
+Sorted by absolute correlation value (descending)
+======================================================================
+  thal        correlation with a1p2: +0.5250  (|r| = 0.5250)
+  nmvcf       correlation with a1p2: +0.4553  (|r| = 0.4553)
+  eia         correlation with a1p2: +0.4193  (|r| = 0.4193)
+  mhr         correlation with a1p2: -0.4185  (|r| = 0.4185)
+  opst        correlation with a1p2: +0.4180  (|r| = 0.4180)
+  cpt         correlation with a1p2: +0.4174  (|r| = 0.4174)
+  dests       correlation with a1p2: +0.3376  (|r| = 0.3376)
+  sex         correlation with a1p2: +0.2977  (|r| = 0.2977)
+  age         correlation with a1p2: +0.2123  (|r| = 0.2123)
+  rer         correlation with a1p2: +0.1821  (|r| = 0.1821)
+  rbp         correlation with a1p2: +0.1554  (|r| = 0.1554)
+  sc          correlation with a1p2: +0.1180  (|r| = 0.1180)
+  fbs         correlation with a1p2: -0.0163  (|r| = 0.0163)
+
+======================================================================
+TOP 5 FEATURE PAIRS MOST CORRELATED WITH EACH OTHER
+(Excluding self-correlation and duplicates)
+======================================================================
+  1. opst     <-> dests     r = +0.6097  (|r| = 0.6097)
+  2. age      <-> mhr       r = -0.4022  (|r| = 0.4022)
+  3. sex      <-> thal      r = +0.3910  (|r| = 0.3910)
+  4. mhr      <-> dests     r = -0.3868  (|r| = 0.3868)
+  5. mhr      <-> eia       r = -0.3807  (|r| = 0.3807)
+
+======================================================================
+TOP 5 FEATURES MOST CORRELATED WITH a1p2 (TARGET)
+======================================================================
+  1. thal        r = +0.5250  (|r| = 0.5250)
+  2. nmvcf       r = +0.4553  (|r| = 0.4553)
+  3. eia         r = +0.4193  (|r| = 0.4193)
+  4. mhr         r = -0.4185  (|r| = 0.4185)
+  5. opst        r = +0.4180  (|r| = 0.4180)
+
+Saved: outputs/correlation_heatmap.png
+
+Generating pair plot (this may take a moment)...
+Saved: outputs/pairplot.png
+
+======================================================================
+DISTRIBUTION ANALYSIS - Skewness and Kurtosis
+======================================================================
+  Feature       Skewness    Kurtosis  Distribution        
+------------------------------------------------------------
+  age            -0.1636     -0.5448  Approx. Normal      
+  sex            -0.7651     -1.4253  Left-Skewed         
+  cpt            -0.8788     -0.2965  Left-Skewed         
+  rbp             0.7226      0.9231  Right-Skewed        
+  sc              1.1837      4.8956  Right-Skewed        
+  fbs             1.9920      1.9826  Right-Skewed        
+  rer            -0.0447     -2.0054  Approx. Normal      
+  mhr            -0.5277     -0.1031  Left-Skewed         
+  eia             0.7289     -1.4797  Right-Skewed        
+  opst            1.2629      1.7593  Right-Skewed        
+  dests           0.5432     -0.6066  Right-Skewed        
+  nmvcf           1.2099      0.2982  Right-Skewed        
+  thal            0.2873     -1.9006  Approx. Normal      
+
+Saved: outputs/feature_distributions.png
+
+======================================================================
+CLASS BALANCE ANALYSIS
+======================================================================
+  Class 1 (No Heart Disease): 150 samples (55.6%)
+  Class 2 (Heart Disease): 120 samples (44.4%)
+  Dataset Status: BALANCED (minority class = 44.4% >= 40%)
+
+Saved: outputs/class_distribution.png
+
+======================================================================
+FEATURE IMPORTANCE - Point-Biserial Correlation with a1p2
+(Statistical significance test: p < 0.05)
+======================================================================
+  Feature      Correlation       p-value  Significant?  
+-------------------------------------------------------
+  thal             +0.5250      1.57e-20  Yes (p<0.05)  
+  nmvcf            +0.4553      3.17e-15  Yes (p<0.05)  
+  eia              +0.4193      6.38e-13  Yes (p<0.05)  
+  mhr              -0.4185      7.12e-13  Yes (p<0.05)  
+  opst             +0.4180      7.68e-13  Yes (p<0.05)  
+  cpt              +0.4174      8.26e-13  Yes (p<0.05)  
+  dests            +0.3376      1.27e-08  Yes (p<0.05)  
+  sex              +0.2977      6.27e-07  Yes (p<0.05)  
+  age              +0.2123      4.43e-04  Yes (p<0.05)  
+  rer              +0.1821      2.67e-03  Yes (p<0.05)  
+  rbp              +0.1554      1.06e-02  Yes (p<0.05)  
+  sc               +0.1180      5.27e-02  No            
+  fbs              -0.0163      7.90e-01  No            
+
+  Significant predictors (11): thal, nmvcf, eia, mhr, opst, cpt, dests, sex, age, rer, rbp
+  Non-significant (2): sc, fbs
+
+Saved: outputs/feature_importance_stats.png
+
+======================================================================
+OUTLIER DETECTION (IQR Method: Q1-1.5*IQR to Q3+1.5*IQR)
+======================================================================
+  Feature       # Outliers    % Outliers
+----------------------------------------
+  age                    0          0.0%
+  sex                    0          0.0%
+  cpt                   20          7.4%
+  rbp                    9          3.3%
+  sc                     5          1.9%
+  fbs                   40         14.8%
+  rer                    0          0.0%
+  mhr                    1          0.4%
+  eia                    0          0.0%
+  opst                   4          1.5%
+  dests                  0          0.0%
+  nmvcf                 19          7.0%
+  thal                   0          0.0%
+
+  Features with outliers: 7/13
+
+Saved: outputs/boxplots.png
+
+======================================================================
+AMAPE MANAGEMENT SUMMARY - Problem 1 Data Analysis
+======================================================================
+
+To the Management of AMAPE (Acme Medical Analysis and Prediction Enterprises):
+
+Our exploratory data analysis of the heart disease dataset comprising 270 patient records
+and 13 medical features reveals several important findings for the development of our predictive
+model. The features most strongly correlated with heart disease diagnosis (a1p2) are thal
+(r = +0.5250), nmvcf (r = +0.4553), eia (r = +0.4193),
+mhr (r = -0.4185), and opst (r = +0.4180), indicating that
+these clinical measurements carry the most predictive power for identifying patients at risk of
+heart disease. Among inter-feature relationships, opst and dests show the strongest
+mutual correlation (r = +0.6097), followed by age and mhr
+(r = -0.4022), which suggests some degree of shared variance among certain predictors.
+
+Regarding class balance, our dataset contains 150 patients without heart
+disease and 120 with heart disease (balanced at
+44.4% minority class), which is favorable for standard classifier training without resampling techniques.
+
+Point-biserial correlation analysis with formal hypothesis testing (alpha = 0.05) confirmed that
+11 of 13 features are statistically significant predictors of heart disease:
+thal, nmvcf, eia, mhr, opst, cpt, dests, sex, age, rer, rbp. The features sc, fbs showed no statistically significant association with the target variable.
+
+Outlier analysis using the IQR method identified 7 features containing
+outliers, notably cpt (7.4%), fbs (14.8%), nmvcf (7.0%). These outliers may affect
+distance-based and linear model performance and should be monitored, though tree-based methods
+are inherently robust to their influence.
+
+We are highly confident that thal, nmvcf, eia, mhr, opst, cpt will be strong predictors of heart disease,
+moderately confident about dests, sex, age, and
+rer, rbp, sc, fbs show weak predictive signal that may still contribute
+marginally within ensemble models. Given these findings, we expect supervised machine learning
+classifiers to achieve good predictive accuracy in the range of 0.78 to 0.95, with non-linear
+methods like SVM and Random Forest expected to perform best on this dataset.
+
+======================================================================
+End of Problem 1 Analysis
+======================================================================

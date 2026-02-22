@@ -1,0 +1,262 @@
+=======================================================
+Dataset Info
+=======================================================
+Total samples: 270
+Features used: 13 (all 13 features)
+Target classes: [np.int64(1), np.int64(2)]
+
+Train set (80/20): 216 samples
+Test set  (80/20): 54 samples
+
+=======================================================
+CLASSIFIER RESULTS
+=======================================================
+
+Perceptron Results:
+    Accuracy: 0.85
+    Combined Accuracy: 0.84
+Logistic Regression Results:
+    Accuracy: 0.91
+    Combined Accuracy: 0.86
+Support Vector Machines Results:
+    Accuracy: 0.94
+    Combined Accuracy: 0.92
+Decision Tree Results:
+    Accuracy: 0.78
+    Combined Accuracy: 0.90
+Random Forest Results:
+    Accuracy: 0.93
+    Combined Accuracy: 0.94
+K-Nearest Neighbor Results:
+    Accuracy: 0.91
+    Combined Accuracy: 0.84
+
+=======================================================
+Method                           Accuracy   Combined
+=======================================================
+Perceptron                           0.85       0.84
+Logistic Regression                  0.91       0.86
+Support Vector Machines              0.94       0.92
+Decision Tree                        0.78       0.90
+Random Forest                        0.93       0.94
+K-Nearest Neighbor                   0.91       0.84
+=======================================================
+Best Method: Support Vector Machines (Accuracy: 0.94)
+
+======================================================================
+CROSS-VALIDATION ANALYSIS (5-Fold CV with Pipeline Scaling)
+======================================================================
+  Perceptron                      CV Mean Accuracy: 0.7889  |  CV Std Dev: +/-0.0764
+  Logistic Regression             CV Mean Accuracy: 0.8000  |  CV Std Dev: +/-0.0840
+  Support Vector Machines         CV Mean Accuracy: 0.7741  |  CV Std Dev: +/-0.0997
+  Decision Tree                   CV Mean Accuracy: 0.6815  |  CV Std Dev: +/-0.1219
+  Random Forest                   CV Mean Accuracy: 0.7667  |  CV Std Dev: +/-0.0833
+  K-Nearest Neighbor              CV Mean Accuracy: 0.8444  |  CV Std Dev: +/-0.0569
+
+======================================================================
+CONFUSION MATRIX AND CLASSIFICATION REPORTS
+======================================================================
+
+--- Perceptron ---
+Confusion Matrix:
+[[27  6]
+ [ 2 19]]
+                precision    recall  f1-score   support
+
+No Disease (1)       0.93      0.82      0.87        33
+   Disease (2)       0.76      0.90      0.83        21
+
+      accuracy                           0.85        54
+     macro avg       0.85      0.86      0.85        54
+  weighted avg       0.86      0.85      0.85        54
+
+
+--- Logistic Regression ---
+Confusion Matrix:
+[[29  4]
+ [ 1 20]]
+                precision    recall  f1-score   support
+
+No Disease (1)       0.97      0.88      0.92        33
+   Disease (2)       0.83      0.95      0.89        21
+
+      accuracy                           0.91        54
+     macro avg       0.90      0.92      0.90        54
+  weighted avg       0.91      0.91      0.91        54
+
+
+--- Support Vector Machines ---
+Confusion Matrix:
+[[31  2]
+ [ 1 20]]
+                precision    recall  f1-score   support
+
+No Disease (1)       0.97      0.94      0.95        33
+   Disease (2)       0.91      0.95      0.93        21
+
+      accuracy                           0.94        54
+     macro avg       0.94      0.95      0.94        54
+  weighted avg       0.95      0.94      0.94        54
+
+
+--- Decision Tree ---
+Confusion Matrix:
+[[26  7]
+ [ 5 16]]
+                precision    recall  f1-score   support
+
+No Disease (1)       0.84      0.79      0.81        33
+   Disease (2)       0.70      0.76      0.73        21
+
+      accuracy                           0.78        54
+     macro avg       0.77      0.77      0.77        54
+  weighted avg       0.78      0.78      0.78        54
+
+
+--- Random Forest ---
+Confusion Matrix:
+[[31  2]
+ [ 2 19]]
+                precision    recall  f1-score   support
+
+No Disease (1)       0.94      0.94      0.94        33
+   Disease (2)       0.90      0.90      0.90        21
+
+      accuracy                           0.93        54
+     macro avg       0.92      0.92      0.92        54
+  weighted avg       0.93      0.93      0.93        54
+
+
+--- K-Nearest Neighbor ---
+Confusion Matrix:
+[[30  3]
+ [ 2 19]]
+                precision    recall  f1-score   support
+
+No Disease (1)       0.94      0.91      0.92        33
+   Disease (2)       0.86      0.90      0.88        21
+
+      accuracy                           0.91        54
+     macro avg       0.90      0.91      0.90        54
+  weighted avg       0.91      0.91      0.91        54
+
+
+Saved: outputs/confusion_matrices.png
+
+======================================================================
+KNN K-SELECTION ANALYSIS
+======================================================================
+     K   CV Accuracy
+----------------------
+     1        0.7593
+     2        0.7370
+     3        0.7704
+     4        0.7815
+     5        0.8037
+     6        0.7926
+     7        0.8037
+     8        0.8111
+     9        0.8111
+    10        0.8259
+    11        0.8444 <-- BEST
+    12        0.8259
+    13        0.8259
+    14        0.8185
+    15        0.8222
+    16        0.8222
+    17        0.8111
+    18        0.8222
+    19        0.8222
+    20        0.8222
+    21        0.8222
+    22        0.8222
+    23        0.8111
+    24        0.8148
+    25        0.8111
+    26        0.8074
+    27        0.8185
+    28        0.8074
+    29        0.8259
+    30        0.8185
+
+  Optimal K = 11 (CV Accuracy: 0.8444)
+
+Saved: outputs/knn_k_selection.png
+
+======================================================================
+ROC CURVE ANALYSIS (AUC - Area Under the Curve)
+======================================================================
+  Logistic Regression             AUC = 0.9683
+  Support Vector Machines         AUC = 0.9784
+  Decision Tree                   AUC = 0.7727
+  Random Forest                   AUC = 0.9668
+  K-Nearest Neighbor              AUC = 0.9654
+
+Saved: outputs/roc_curves.png
+
+======================================================================
+LEARNING CURVE ANALYSIS (Top 2 Models)
+======================================================================
+  Support Vector Machines:
+    Final Training Score: 0.9231
+    Final CV Score:       0.7741
+    Gap:                  0.1491
+    Assessment:           Overfitting (gap > 0.10)
+
+  Random Forest:
+    Final Training Score: 0.9537
+    Final CV Score:       0.7667
+    Gap:                  0.1870
+    Assessment:           Overfitting (gap > 0.10)
+
+Saved: outputs/learning_curves.png
+
+==========================================================================================
+EXTENDED PERFORMANCE COMPARISON
+==========================================================================================
+Method                         Test Acc  Comb Acc  CV Mean   CV Std      AUC
+------------------------------------------------------------------------------------------
+Perceptron                         0.85      0.84   0.7889   0.0764     N/A 
+Logistic Regression                0.91      0.86   0.8000   0.0840   0.9683
+Support Vector Machines            0.94      0.92   0.7741   0.0997   0.9784
+Decision Tree                      0.78      0.90   0.6815   0.1219   0.7727
+Random Forest                      0.93      0.94   0.7667   0.0833   0.9668
+K-Nearest Neighbor                 0.91      0.84   0.8444   0.0569   0.9654
+==========================================================================================
+
+======================================================================
+AMAPE MANAGEMENT SUMMARY - Problem 2 ML Classifiers
+======================================================================
+
+To the Management of AMAPE (Acme Medical Analysis and Prediction Enterprises):
+
+After training and evaluating six supervised machine learning classifiers on our heart disease
+dataset using an 80/20 train-test split with standardized features, we recommend Support Vector Machines
+as the best-performing model for AMAPE's heart disease prediction application, achieving a test
+accuracy of 0.94 and a combined accuracy of 0.92 on
+the full dataset. The second-best performer was Random Forest with a test accuracy of
+0.93, which also demonstrates strong generalization capability. Among
+the six methods evaluated, Decision Tree showed the lowest performance with an accuracy of
+0.78, which may be attributed to its sensitivity to hyperparameter constraints and
+the complexity of clinical decision boundaries in this dataset.
+
+To ensure the robustness of these findings beyond a single train-test split, we conducted 5-fold
+cross-validation with proper pipeline scaling. The cross-validated results confirm K-Nearest Neighbor
+as the most reliable classifier with a mean CV accuracy of 0.8444 (+/-0.0569),
+providing higher confidence that this performance will generalize to unseen patient data.
+
+ROC analysis further validates our recommendation: Support Vector Machines achieved the highest AUC of
+0.978, indicating excellent discrimination between disease and non-disease patients
+across all classification thresholds. Learning curve analysis for the top two models shows:
+Support Vector Machines (Overfitting (gap > 0.10), gap=0.149); Random Forest (Overfitting (gap > 0.10), gap=0.187), suggesting some overfitting that may be addressed with additional training data.
+
+For K-Nearest Neighbors, systematic evaluation of K from 1 to 30 via cross-validation identified
+K=11 as optimal (CV accuracy: 0.8444).
+
+Based on cross-validated performance and AUC analysis, we recommend K-Nearest Neighbor for deployment
+in AMAPE's heart disease prediction system, with an expected real-world accuracy of approximately
+0.84.
+
+======================================================================
+End of Problem 2 Analysis
+======================================================================
