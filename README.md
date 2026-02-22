@@ -96,5 +96,5 @@ All outputs are saved to the `outputs/` folder automatically.
 ---
 
 ## Author
-Sakshi | MS Robotics and Autonomous Systems (AI concentration)  
+Sakshi Lathi | MS Robotics and Autonomous Systems (AI concentration)  
 Arizona State University
