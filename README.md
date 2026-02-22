@@ -77,7 +77,7 @@ generalization.
 ## How to Run
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/heart-disease-prediction-ml.git
+git clone https://github.com/sakshilathi1/heart-disease-prediction-ml.git
 cd heart-disease-prediction-ml
 
 # Install dependencies
