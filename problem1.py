@@ -1,10 +1,3 @@
-# EEE 591 - Project 1
-# Problem 1: Data Analysis
-# Name: Sakshi Lathi
-# Assignment: Project 1
-# Date: February 21, 2026
-# AI Citation: https://gemini.google.com/share/99dc673e0103
-
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
